@@ -1,0 +1,5 @@
+# .gitignore
+
+# Ignore MySQL environment file in the config folder
+
+mysql.env

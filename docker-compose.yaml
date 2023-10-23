@@ -13,9 +13,13 @@ services:
       dockerfiles: php.dockerfile
     volumes:
       - ./src:/var/www/html:delegated
+    # ports: not needed port changed to 9000 in nginx php expected defult container to container communication
+    #   - '3000:9000'
 
-
-  # mysql:
+   mysql:
+    image: mysql:5.7
+    env_file:
+      ./env/mysql.env
   # composer:
   # artisan:
   # npm:
